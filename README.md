@@ -11,8 +11,6 @@ LinearRegression model is used as ML model.
 
 ## Model Performance
 mean sqaured error, mean absolute error, root mean squared error and  r sqaured score  are the metrices use for evaluvate the model performance
-![image](https://github.com/user-attachments/assets/10ddf82f-7737-42a7-8e9a-f260644a000d)
-
 
 ## Dataset 
 Dataset is recieved from https://www.investing.com/equities/nvidia-corp-historical-data site
