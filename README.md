@@ -1,4 +1,4 @@
-# NVIDIA-company-Stock-Market-predictions
+# NVIDIA-company-Stock-Market-Price-Predictions - (Flask App)
 
 Main aim of this project is  users can  identify the current stock market price of  NVIDIA company. "Date, Open, High, Change, and Volume( Vol)" are the independent features  and price is dependent feature. For completing this project mainly use Machine Learning, Explotary Data Analysis, data preprocessing, and  flask.
 
