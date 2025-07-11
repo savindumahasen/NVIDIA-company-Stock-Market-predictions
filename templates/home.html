@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NVIDIA Stock Market Price Prediction</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    }
+
+    header h1 {
+      color: #76b900;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #76b900;
+    }
+
+    .container {
+      max-width: 400px;
+      max-height: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,255,0,0.2);
+    }
+
+    .container h2 {
+      color: #76b900;
+      margin-bottom: 20px;
+    }
+    form{
+      width: 400px;
+      height: 400px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #2a2a2a;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      grid-column: span 2;
+      padding: 12px;
+      width:200px;
+      margin-left: 90px;
+      margin-top: -20px;
+      background-color: #76b900;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #5e9700;
+    }
+    .resul{
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>NVIDIA Stock Market Price Prediction</h2>
+   <div class="result">
+        {{prediction_text}}
+    </div>
+    <form action="{{ url_for('predictions') }}" method="POST">
+      <div>
+        <label for="open">Open</label>
+        <input type="number" required id="open" name="open" step="0.01" placeholder="e.g. 160.45">
+      </div>
+      <div>
+        <label for="high">High</label>
+        <input type="number" required id="high" name="high" step="0.01" placeholder="e.g. 165.78">
+      </div>
+      <div>
+        <label for="low">Low</label>
+        <input type="number" required id="low" name="low" step="0.01" placeholder="e.g. 158.22">
+      </div>
+      <div>
+        <label for="change">Change %</label>
+        <input type="text" required id="change" name="change" placeholder="e.g. 2.15">
+      </div>
+      <div>
+        <label for="date">Date (MMDDYYYY)</label>
+        <input type="text" required id="date" name="date" placeholder="e.g. 07112025">
+      </div>
+      <div>
+        <label for="vol">Volume (Vol)</label>
+        <input type="number" required id="vol" name="vol" placeholder="e.g. 187.57M">
+      </div>
+      <br><br><br>
+      <div>
+        <input type="submit">
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
